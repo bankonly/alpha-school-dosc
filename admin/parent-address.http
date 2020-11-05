@@ -1,0 +1,23 @@
+// List all data
+GET {{$alpha_url_local}}/parent-address/list?page=1&limit=2
+
+###
+
+// Get data by sending _id
+GET {{$alpha_url_local}}/parent-address/get/5f999464d027b511e59b7d3b
+
+###
+
+// Delete data by sending _id
+DELETE {{$alpha_url_local}}/parent-address/delete/5f999464d027b511e59b7d3b
+
+###
+
+// Create new data
+POST {{$alpha_url_local}}/parent-address/create
+Content-Type: : application/json
+
+{
+    "village":"Dongsavanth"
+}
+

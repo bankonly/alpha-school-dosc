@@ -1,0 +1,41 @@
+
+
+
+
+// Create new parents
+POST {{$alpha_url_local}}/parent/create
+Content-Type: application/json
+
+{
+    "address_id":"5f99945cd027b511e59b7d37",
+    "username":"vongkeo2",
+    "first_name":"bank",
+    "last_name":"sdsd",
+    "password":"123123123",
+    "nationality":"lao",
+    "gender":"male",
+    "parent_status":"father"
+}
+
+###
+
+// update base on sending key
+PUT {{$alpha_url_local}}/parent/update
+
+
+###
+
+
+DELETE {{$alpha_url_local}}/parent/delete/5f9c0cc92ecde731a886b812
+
+
+###
+
+
+GET {{$alpha_url_local}}/parent/list
+
+
+###
+
+
+GET {{$alpha_url_local}}/parent/list/5f9b886c43fa6e45c4337887

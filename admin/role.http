@@ -1,0 +1,27 @@
+POST {{$alpha_url_local}}/role/create
+Content-Type: application/json
+
+{
+    "name":"main teacher v1",
+    "roles":[
+        {
+            "name":"subject",
+            "page":"subject",
+            "permission":1
+        },
+         {
+            "name":"teacher",
+            "page":"teacher",
+            "permission":1
+        }
+    ]
+}
+
+###
+GET {{$alpha_url_local}}/role/list
+
+###
+GET {{$alpha_url_local}}/role/list/5fa41c22ef462313a2d6a1f7
+
+###
+DELETE {{$alpha_url_local}}/role/delete/5fa41c4bbf0b3413b63c5ccc
