@@ -1,0 +1,16 @@
+POST {{$alpha_url_local}}/page/create
+Content-Type: application/json
+
+{
+    "name":"development"
+}
+
+###
+// Reset All page to default table already have in database and remnove all added cew page
+POST {{$alpha_url_local}}/page/reset
+
+###
+GET {{$alpha_url_local}}/page/list
+
+###
+DELETE {{$alpha_url_local}}/page/delete/5fa41ecac419af161c530284
