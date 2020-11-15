@@ -1,0 +1,28 @@
+POST {{$alpha_url_local}}/homework/homeworks
+Content-Type: application/json
+Authorization: {{$parent_token}}
+
+{
+    "status":"true",
+    "list_by":"student",
+    "target_id":"5fa6s4a5fac162d3628e9f292"
+}
+
+# @status requried as string value "true","false" and "all"
+# EX: 1. "all" = all status homework
+#     2. "true" = completed homework 
+#     3. "true" = pending homework 
+# @list_by optional value "student" and "default"
+# @target_id optional requried as student_id if list_by !== "default"
+
+
+###
+POST {{$alpha_url_local}}/homework/complete-homework
+Content-Type: application/json
+Authorization: {{$parent_token}}
+
+{
+    "_id":"5fad52dca68cb91eb4b3c3da"
+}
+
+# @_id required as homework id  
