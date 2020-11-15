@@ -4,18 +4,20 @@
 
 // Create new parents
 POST {{$alpha_url_local}}/parent/create
-Content-Type: application/json
+Content-Type: {{$file_body_header}}
 
-{
-    "address_id":"5f99945cd027b511e59b7d37",
-    "username":"vongkeo2",
-    "first_name":"bank",
-    "last_name":"sdsd",
-    "password":"123123123",
-    "nationality":"lao",
-    "gender":"male",
-    "parent_status":"father"
-}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="username"
+
+Souksavanh
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="example.jpg"
+Content-Type: image/jpg
+
+< ./assets/1.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
 
 ###
 
