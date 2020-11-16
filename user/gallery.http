@@ -1,0 +1,6 @@
+GET {{$alpha_url_local}}/gallery/list-gallery
+Authorization: {{$parent_token}}
+
+###
+GET {{$alpha_url_local}}/gallery/list-gallery/5fb2af069402ab4a5c4cc8ad
+Authorization: {{$parent_token}}

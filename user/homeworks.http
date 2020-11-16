@@ -4,8 +4,9 @@ Authorization: {{$parent_token}}
 
 {
     "status":"true",
-    "list_by":"student",
-    "target_id":"5fa6s4a5fac162d3628e9f292"
+    "list_bsy":"student",
+    "target_id":"5fa6s4a5fac162d3628e9f292",
+    "select":"title desc dead_line is_completed -student_id"
 }
 
 # @status requried as string value "true","false" and "all"
@@ -14,7 +15,7 @@ Authorization: {{$parent_token}}
 #     3. "true" = pending homework 
 # @list_by optional value "student" and "default"
 # @target_id optional requried as student_id if list_by !== "default"
-
+# @select optional default == "title desc dead_line is_completed"
 
 ###
 POST {{$alpha_url_local}}/homework/complete-homework
