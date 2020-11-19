@@ -1,0 +1,26 @@
+POST {{$alpha_url_local}}/appointment/list-appointment
+Authorization: {{$parent_token}}
+Content-Type: application/json
+
+{
+    "is_accepted":true,
+    "is_completed":true
+}
+
+// is_accepted for accepted appointment or unaccepted
+// is_completed default === false
+
+###
+POST {{$alpha_url_local}}/appointment/appointment-management
+Authorization: {{$parent_token}}
+Content-Type: application/json
+
+{
+    "appointment_id":"5fb69c61bfbabb6ba7c383a3",
+    "method":"complete",
+    "value":true
+}
+
+# appointment_id requried
+# method requried enum "accept" "move" "complete"
+# value reqruied if method === "move" ,value will be requried as date,other is boolean
