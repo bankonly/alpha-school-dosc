@@ -1,0 +1,28 @@
+get {{$alpha_url_local}}/blog-task/list-blog-task
+Authorization: {{$parent_token}}
+
+
+###
+get {{$alpha_url_local}}/blog-task/list-blog-task-reply/5fbbf18af734c4bda1011e1b
+Authorization: {{$parent_token}}
+
+
+###
+POST {{$alpha_url_local}}/blog-task/parent/reply
+Authorization: {{$parent_token}}
+Content-Type: application/json
+
+{
+    "blog_task_id":"5fbbf18af734c4bda1011e1b",
+    "message":"new reply from parent 2"
+}
+
+###
+POST {{$alpha_url_local}}/blog-task/edit-reply
+Authorization: {{$parent_token}}
+Content-Type: application/json
+
+{
+    "reply_id":"5fbbf7a790e8dec0bd034efc",
+    "message":"new reply from parent 2 update"
+}
